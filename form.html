@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login or Sign up</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/e2d353a86b.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+		body{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			background: url(./1092735.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.form{
+			background-color: #fff;
+			height: 65vh;
+			width: 25vw;
+			border-radius: 4px;
+		}
+		h2{
+			font-family: 'Kanit', sans-serif;
+			text-align: center;
+			padding-top: 8px;
+			letter-spacing: 3px;
+		}
+		.input{
+			display: flex;
+			flex-direction: column;
+			margin-bottom:5px;
+			position: relative;
+			margin-bottom: 15px;
+			
+		}
+		.input1{
+			display: flex;
+			flex-direction: column;
+			margin-bottom:5px;
+			position: relative;
+			
+		}
+		.input input[type="text"], input[type="password"]{
+			width: 70%;
+			height: 40px;
+			margin: 0 auto;
+			background-color: rgb(236, 234, 234);
+			border: none;
+			position: relative;
+			padding-left:45px ;
+			font-size: 15px;
+		}
+		.fa-envelope-o{
+			padding-left: 45px;
+			padding-top: 15px;
+			position: absolute;
+			z-index: 1000;
+			color: gray;
+			font-size: 14px;
+		}
+		.fa-lock{
+			padding-left: 45px;
+			padding-top: 15px;
+			position: absolute;
+			z-index: 1000;
+			color: gray;
+			font-size: 14px;
+		}
+		.check{
+			margin: 0px 35px;
+			margin-top: 5px;
+			font-size: 15px;
+			font-family: sans-serif;
+			color: gray;
+		}
+		.check input[type="checkbox"]{
+			width: 14px;
+			height: 14px;
+			border: 4px solid rgb(240, 82, 135);
+			background-color: rgb(240, 82, 135);
+		}
+
+		.h6{
+			margin: 0 auto;
+			width: 82%;
+			height: 40px;
+			border-radius: 2px;
+			background-color: rgb(240, 82, 135);
+			border: none;
+			transition: all .3s ease-in-out;
+		}
+		h6{
+			text-align: center;
+			padding-top: 7px;
+			font-size: 16px;
+			margin-top: 20px;
+			color: #fff;
+			font-family: 'Kanit', sans-serif;
+			
+		}
+		.h6:hover{
+			background-color: rgb(207, 39, 95);
+			cursor: pointer;
+		}
+		.or{
+			text-align: center;
+			font-size: 14px;
+			font-family: sans-serif;
+			color: gray;
+			padding-top: 15px;
+			transition: all .3s ease-in-out;
+			word-spacing: 3px;
+		}
+		
+		.logo{
+			display: flex;
+			justify-content: space-around;
+			width: 80%;
+			margin: 0 35px;
+		}
+		.facebook, .google{
+			border: 1px solid rgb(226, 226, 226);
+			border-radius: 4px;
+			width: 140px;
+			height: 30px;
+			font-family: 'Kanit', sans-serif;
+			font-weight: 600;
+			text-align: center;
+			transition: all .3s ease-in-out;
+		}
+		.google:hover,.facebook:hover{
+			border: 1px solid rgb(167, 164, 164);
+			cursor: pointer;
+		}
+		.facebook{
+			padding-top: 2px;
+			color: rgb(0, 0, 116);
+		}
+		.google{
+			color: rgb(90, 89, 89);
+			padding-top: 2px;
+			
+		}
+		.fa-square-facebook{
+			padding: 0 5px;
+		}
+		.fa-google {
+			background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent;
+			-webkit-text-fill-color: transparent;
+		  }
+		  .fa-google{
+			font-size: 16px;
+			padding: 0 5px;
+		  }
+		  .foot{
+			display: flex;
+			justify-content: center;
+			height: 11vh;
+			align-items: flex-end;
+			color: gray;
+			font-family: sans-serif;
+			font-size: 15px;
+		  }
+		  
+		  .foot a{
+			padding-left: 5px;
+			color: gray;
+			transition: all .3s ease-in-out;
+		  }
+		  
+		 
+		  @media screen and (min-width:1024px)
+		  {
+			.form{
+				height: 65vh;
+			width: 25vw;
+			}
+			.check{
+				margin: 0px 35px;
+				margin-top: 5px;
+				font-size: 15px;
+				font-family: sans-serif;
+				color: gray;
+			}
+		  }
+
+
+
+
+
+		  
+
+		  @media screen and (min-width:767px) and (max-width:1023px)
+		  {
+			.form{
+				height: 55vh;
+			width: 50vw;
+			}
+			.foot{
+				display: flex;
+				justify-content: center;
+				height: 7vh;
+				align-items: flex-end;
+				font-size: 16px;
+				padding-bottom: 5px;
+			  }
+			  .check{
+				margin: 0px 50px;
+				margin-top: 5px;
+			}
+			.fa-envelope-o{
+				padding-left: 65px;
+				padding-top: 15px;
+				
+			}
+			.fa-lock{
+				padding-left: 65px;
+				padding-top: 15px;
+				
+			}
+			
+		  }
+
+
+
+
+
+
+
+		 
+		  @media screen and (min-width:450px) and (max-width:767px)
+		  {
+			.form{
+				height: 59vh;
+			width: 85vw;
+			}
+			.check{
+				margin: 0px 4.5rem;
+			}
+			.foot{
+				display: flex;
+				justify-content: center;
+				height: 8vh;
+				font-size: 15px;
+			  }
+			  .fa-envelope-o{
+				padding-left: 80px;
+				padding-top: 15px;
+				
+			}
+			.fa-lock{
+				padding-left: 80px;
+				padding-top: 15px;
+				
+			}
+			.input input[type="text"], input[type="password"]{
+				padding-left:60px ;
+				font-size: 15px;
+			}
+			  
+			
+		  }
+
+
+
+
+
+		  @media screen and (max-width:450px)
+		  {
+			.form{
+				height: 63vh;
+			width: 85vw;
+			}
+			.check{
+				margin: 0px 35px;
+			}
+			.foot{
+				display: flex;
+				justify-content: center;
+				height: 8vh;
+				font-size: 15px;
+			  }
+			  
+			
+		  }
+		  
+	</style>
+  </head>
+  <body>
+    <div class="form">
+      <h2 class="log">LOGIN</h2>
+      <div class="input">
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        <input type="text" placeholder="Email" />
+	</div>
+		<div class="input1">
+        <i class="fa-solid fa-lock"></i>
+        <input
+          type="password"
+          name="pass"
+          id="password"
+          placeholder="Password"
+        />
+        
+      </div>
+	  <p class="check">
+	  <input type="checkbox" name="" id="" /> Remember me</p>
+	  <div class="h6">
+      <h6>LOGIN</h6></div>
+      <p class="or">Or login with</p>
+      <div class="logo">
+        <p class="facebook">
+          <i class="fa-brands fa-square-facebook"></i> Facebook
+        </p>
+        <p class="google">
+			<i class="fab fa-google fa-3x"></i>
+          Google
+        </p>
+      </div>
+	  <div class="foot">
+      <p >Not a member? <a href="#">Sign up now</a> </p></div>
+    </div>
+  </body>
+</html>
